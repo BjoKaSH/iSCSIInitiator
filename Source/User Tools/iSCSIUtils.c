@@ -22,7 +22,7 @@ static int PORT_MAX = (1 << sizeof(in_port_t)*8) -1;
 Boolean iSCSIUtilsValidateIQN(CFStringRef IQN)
 {
     // IEEE regular expression for matching IQN name
-    const char pattern[] =  "^iqn\\.[0-9]{4}-[0-9]{2}\\.[[:alnum:]]{3}\\."
+    const char pattern[] =  "^iqn\\.[0-9]{4}-[0-9]{2}\\.[[:alnum:]]{2,63}\\."
                             "[-A-Za-z0-9.]{1,255}:[-A-Za-z0-9.]{1,255}"
                             "|^eui\\.[[:xdigit:]]{16}$";
     
